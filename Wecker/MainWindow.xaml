@@ -1,0 +1,23 @@
+﻿<Window x:Class="Wecker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wecker"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ListBox x:Name="LB_Appointments" HorizontalAlignment="Left" Height="203" Margin="10,10,0,0" VerticalAlignment="Top" Width="324"/>
+        <Button x:Name="Button_TerminHinzufügen" Content="Termin hinzufügen" HorizontalAlignment="Left" Margin="366,198,0,0" VerticalAlignment="Top" Width="265" Click="Button_TerminHinzufügen_Click"/>
+        <Button Content="Termin löschen" HorizontalAlignment="Left" Margin="10,218,0,0" VerticalAlignment="Top" Width="324" Click="Button_TerminLoeschen_Click" />
+        <TextBox x:Name="TB_Title" HorizontalAlignment="Left" Height="23" Margin="366,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="265"/>
+        <TextBox x:Name="TB_Hours" HorizontalAlignment="Left" Height="23" Margin="366,93,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85"/>
+        <TextBox x:Name="TB_Minutes" HorizontalAlignment="Left" Height="23" Margin="546,93,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85"/>
+        <Label Content="Titel" HorizontalAlignment="Left" Margin="366,9,0,0" VerticalAlignment="Top"/>
+        <Label Content="h" HorizontalAlignment="Left" Margin="366,68,0,0" VerticalAlignment="Top"/>
+        <Label Content="m" HorizontalAlignment="Left" Margin="546,67,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="RB_Sound" Content="Klang" HorizontalAlignment="Left" Margin="470,147,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <RadioButton x:Name="RB_Colour" Content="Farbe" HorizontalAlignment="Left" Margin="470,167,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
