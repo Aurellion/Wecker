@@ -20,6 +20,8 @@ namespace Wecker
     /// </summary>
     public partial class MainWindow : Window
     {
+       
+
         //timer
         System.Windows.Threading.DispatcherTimer timer = new System.Windows.Threading.DispatcherTimer();
         public MainWindow()
@@ -33,12 +35,19 @@ namespace Wecker
 
         void checkAlarms(object sender, EventArgs e)
         {
-            for (int i = 0; i < LB_Appointments.Items.Count; i++)
+            //for (int i = 0; i < LB_Appointments.Items.Count; i++)
+            //{
+            //    Appointment t = (Appointment)LB_Appointments.Items[i];
+            //    if(t.IsActive())
+            //    {
+            //        t.Alarm();
+            //    }
+            //}     
+            foreach (Appointment item in LB_Appointments.Items)
             {
-                Appointment t = (Appointment)LB_Appointments.Items[i];
-                if(t.IsActive())
+                if (item.IsActive())
                 {
-                    t.Alarm();
+                    item.Alarm();
                 }
             }
         }
@@ -56,14 +65,14 @@ namespace Wecker
             {
                 if (RB_Colour.IsChecked == true)
                 {
-                    Appointment Termin = new AppointmentColour(titel, stunden, minuten);
+                    Appointment Termin = new AppointmentColour(titel, stunden, minuten, this);
                     LB_Appointments.Items.Add(Termin);
                   
                 }
                 else
                 {
                     Appointment Termin = new AppointmentSound(titel, stunden, minuten);
-                    LB_Appointments.Items.Add(Termin);
+                    LB_Appointments.Items.Add(Termin);                    
                 }
             }
             else
